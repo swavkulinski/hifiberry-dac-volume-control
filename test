@@ -1,0 +1,4 @@
+#! /bin/sh
+
+./run_test & echo $! > run_test.pid
+

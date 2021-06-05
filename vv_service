@@ -1,0 +1,23 @@
+#! /bin/sh
+# /etc/init.d/vv_service
+#
+
+# lock
+touch /var/lock/vv_service
+
+case "$1" in
+  start)
+    echo "Starting Volumio Volume Service"
+    /usr/local/bin/volume & echo $! > /var/run/vv_service/vv_service.pid
+    ;;
+  stop)
+    echo "Stopping Volumio Volume Service"
+    kill -9 `cat /var/run/vv_service/vv_service.pid
+    rm /var/run/vv_service/vv_service.pid
+    ;;
+  *)
+    echo "Usage: /etc/init.d/vv_service {start|stop}"
+    exit1
+esac
+
+exit 0
