@@ -1,5 +1,12 @@
 #! /usr/bin/env python3
 
+# From official Adafruit sample
+# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
+# SPDX-License-Identifier: MIT 
+
+# 2021 Swav Kulinski
+# License MIT https://spdx.org/licenses/MIT.htm
+
 # controls HiFiBerry DAC+ HD volume using ADS1115 input
 
 import alsaaudio as audio
